@@ -1,6 +1,17 @@
 package br.com.dog.entities;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Dog {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String name;
     private String description;
@@ -40,6 +51,8 @@ public class Dog {
     }
 
 
-    //TODO CRIAR ATRIBUTOS, METODOS GET SET PARA NOSSA ENTIDADE NO CASO DOG
+    //TODO arrumar os atributos conforme https://www.petlove.com.br/cane-corso/r
+
+    //TODO implementar construtor com todos os atributos e um sem atributos
 
 }
